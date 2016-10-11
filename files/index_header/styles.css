@@ -1,0 +1,72 @@
+a{cursor: pointer;}
+body {
+  position:static;
+  left:auto;
+  width:1280px;
+  top: 0px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 0px;
+}
+.index_head{
+  width:1280px;
+  height: 155px;
+  position: absolute;
+  background-color: #1c1c1c;
+}
+.log{
+	position: relative;
+	float: left;
+	width: 149px;
+}
+.log_img{
+	position: relative;
+	width: 100px;
+	height: 100px;
+	margin-left: 44px;
+	margin-top: 29px;
+	z-index: 100;
+}
+.vr_lab{
+	position: relative;
+	float: left;
+	width: 493px;
+	height: 155px;
+}
+.vr_lab_img{
+	position:  relative;
+	width: 252px;
+	height: 83px;
+	margin-top: 42px;
+}
+.title_a{
+	position: relative;
+	float: left
+	;width:86px;
+	height: 155px;
+	color:#cccccc;
+	font-family:'汉仪细简黑简 Regular', '汉仪细简黑简';
+	font-style:normal;
+	font-size:19pt;
+	cursor: pointer;
+  	z-index: 100;
+}
+.p_a{
+	margin-top: 85px;
+	margin-left: 20px;
+}
+.title_b{
+	position: relative;
+	float: left;
+	width:122px;
+	height:155px;
+	color:#cccccc;
+	font-family:'汉仪细简黑简 Regular', '汉仪细简黑简';
+  	font-style:normal;
+  	font-size:19pt;
+  	z-index: 100;
+}
+.p_b{
+	margin-top: 85px;
+	margin-left: 10px;
+}
