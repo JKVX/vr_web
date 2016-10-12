@@ -18,7 +18,23 @@
               </div>
               <div id="<?= 'intro'.$members[$i][$j]['id']?>" style="display:none;position: absolute;top:20px;left: 200px;">
                 <div id="intro_div_txt" class="text">
-                <p><span><?= str_replace(array("\r\n", "\r", "\n"),"<br/>",$members[$i][$j]['members_intro'])?></span></p>
+                <div style="height: 60px;position: relative;">
+                <div class="float_div"><p><span><?= $members[$i][$j]['admission_year']?></span></p></div>
+                <div class="float_div"><p><span><?= $members[$i][$j]['major']?></span></p></div>
+                <div class="float_div"><p><span><?= $member_role[$i]['role_name']?></span></p></div>
+                </div>
+                <div style="margin-top: 15px;width:250px;position: relative;float: left;">
+                <div class="float_div"><p><span><?= $members[$i][$j]['skill1']?></span></p></div>
+                <div class="float_div"><p><span><?= $members[$i][$j]['skill2']?></span></p></div>
+                <div class="float_div"><p><span><?= $members[$i][$j]['skill3']?></span></p></div>
+                <div class="float_div"><p><span><?= $members[$i][$j]['skill4']?></span></p></div>
+                <div class="float_div"><p><span><?= $members[$i][$j]['skill5']?></span></p></div>
+                <div class="float_div"><p><span><?= $members[$i][$j]['skill6']?></span></p></div>
+                <div class="float_div"><p><span><?= $members[$i][$j]['skill7']?></span></p></div>
+                <div class="float_div"><p><span><?= $members[$i][$j]['skill8']?></span></p></div>
+                <div class="float_div"><p><span><?= $members[$i][$j]['skill9']?></span></p></div>
+                <div class="float_div"><p><span><?= $members[$i][$j]['skill10']?></span></p></div>
+                </div>
                 </div>
                 <img id="intro_div_img" class="img " src="<?= base_url('images/members/b_u88.png')?>"/>  
               </div>

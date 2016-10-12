@@ -31,6 +31,14 @@ class Intro_model extends CI_Model
         $this->db->where('id','2');
         $this->db->update('lab_intro', $data);
     }
+
+    public function update($data){
+        $this->db->where('id',$data['id'])->update('lab_intro',$data);
+    }
+
+    public function get_by_id($id){
+        return $this->db->where('id',$id)->get('lab_intro')->result_array()[0];
+    }
 }
 
 ?>

@@ -18,7 +18,7 @@ class TeamBuild extends CI_Controller
      *前台默认页面
      */
     public function index(){
-        $teambuild_id=$this->teambuild->get_top_id();
+/*        $teambuild_id=$this->teambuild->get_top_id();
          $data['type']=1;
         if(count($teambuild_id)!=0){       
             $data['teambuild']=$this->teambuild->get_by_id($teambuild_id[0]['id'])[0];
@@ -26,7 +26,8 @@ class TeamBuild extends CI_Controller
         $data['teambuild_list']=$this->teambuild->get_all_teambuild();
         $this->load->view('templates/header');
         $this->load->view('templates/index_header');
-        $this->load->view('teambuild/teambuild',$data);
+        $this->load->view('teambuild/teambuild',$data);*/
+        $this->show_teambuild_photo();
     }
 
     /**

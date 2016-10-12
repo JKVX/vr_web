@@ -77,9 +77,9 @@
         </div>
       <?php endfor;?>
       <img id="u65_img" class="img " src="<?= base_url('images/intro/u65.png')?>"/>
-            <div id="wmain">
+            <div id="wmain" style="margin-bottom: 100px;">
      <?php foreach ($workshops as $rows):?>
-     <div id="uwdiv" class="ax_h1">  
+     <div id="uwdiv">  
         <div id="uwt" class="text">
           <p id="wtp"><span id="wtp1">·</span><span id="wtp2"> <?= $rows['workshops_title']?></span></p>
         </div>

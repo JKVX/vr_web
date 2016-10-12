@@ -67,6 +67,11 @@
       function down2(id){
         document.getElementById(id).src="<?= base_url('images/research/u24_mouseOver.png')?>";
       }
+
+      function pre_view(){
+        var url = window.URL.createObjectURL(document.getElementById("u49_input").files[0])
+        document.getElementById("u42_img").src=url;
+      }
       function get_facilities_detail(){
         if($("#u33_input").val()!=-1&&$("#u33_input").val()!=null){
         $
@@ -207,7 +212,7 @@
 
       <form class="form-horizontal" role="form" method="post" id="Info" enctype="multipart/form-data">
       <div id="u49" class="ax_html__">
-        <input id="u49_input" type="file" value="打开文件" name="pic_name" required="required" />
+        <input id="u49_input" type="file" value="打开文件" name="pic_name" required="required" onchange="pre_view()" />
       </div>
       <div id="u48" class="ax_文本框_单行_">
         <input id="u48_input" type="text" value="" name="facilities_name" required="required"/>

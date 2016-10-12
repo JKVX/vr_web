@@ -973,8 +973,7 @@
   position:relative;
   width:300px;
   height:19px;
-  background-color:transparent;
-  font-family:'汉仪细简黑简 Bold', '汉仪细简黑简';
+  font-family:'汉仪细简黑简 Regular', '汉仪细简黑简';
   font-style:normal;
   font-size:20px;
   color:#B3B3B3;
@@ -1296,7 +1295,7 @@ margin-left: 10px;
  position:relative;list-style: none;margin-left:260px;margin-right: auto;text-align: center;padding-left: auto;padding-right: auto;
 }
 .csrcode li {
-  position:relative;text-align: center;list-style-type: none; margin-left: 10px; width: 16px;background: url('../../images/home/u44.png') no-repeat; float:left;height:16px;cursor: pointer;color:#cccccc;
+   font-size: 0;position:relative;text-align: center;list-style-type: none; margin-left: 10px; width: 16px;background: url('../../images/home/u44.png') no-repeat; float:left;height:16px;cursor: pointer;color:#cccccc;
 }
 .csrcode LI.on {
   width:16px; background: url('../../images/home/u44_selected.png') no-repeat;height:16px;color:#d8af03;

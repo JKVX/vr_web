@@ -72,7 +72,7 @@
 
       <form class="form-horizontal" role="form" method="post" id="Info" enctype="multipart/form-data">
       <div id="u29" class="ax_html__">
-        <input id="u29_input" name="new_pic" type="file" value="打开文件" required />
+        <input id="u29_input" name="new_pic" type="file" value="打开文件" required onchange="pre_view()" />
       </div>
 
       <div id="u30" class="ax_html__">
@@ -92,12 +92,18 @@
         <input id="u33_input" type="submit" value="下移" onclick="down_wheel_pic()" />
       </div>
 <script type="text/javascript">
-            function over2(id){
+    function over2(id){
         document.getElementById(id).src="<?= base_url('images/research/u24.png')?>";
       }
       function down2(id){
         document.getElementById(id).src="<?= base_url('images/research/u24_mouseOver.png')?>";
       }
+
+      function pre_view(){
+        var url = window.URL.createObjectURL(document.getElementById("u29_input").files[0])
+        document.getElementById("u22_img").src=url;
+      }
+
       function get_wheel_pic_detail(){
         if($("#u18_input").val()!=-1&&$("#u18_input").val()!=null){
         $

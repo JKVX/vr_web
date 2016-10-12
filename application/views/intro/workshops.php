@@ -75,12 +75,12 @@
         </div>
 
       <div id="u42" class="ax_文本框_多行_">
-      <script id="editor" type="text/plain" style="width:800px;height:263px;"></script>
+      <script id="editor" type="text/plain" style="display:block;width:800px;height:263px;"></script>
       <div id="u352" class="ax_html__">
       <input id="u35_input2" type="submit" value="新建工作坊" onclick="uptext()"/>
       </div>
       <div id="u35" class="ax_html__">
-      <input id="u35_input" type="submit" style="visibility: hidden;" value="保存修改" onclick="update()"/>
+      <input id="u35_input" type="submit" style="display:none;" value="保存修改" onclick="update()"/>
       </div>
 
       </div>
@@ -178,6 +178,8 @@
             UE.getEditor('editor').setContent("");
             document.getElementById("u39_input").value="";
             document.getElementById("u43_input").value="-1";
+            document.getElementById('u35_input2').style.display="block";
+            document.getElementById('u35_input').style.display="none";
             alert('保存信息成功！');
            }
         });
@@ -222,7 +224,8 @@
           success : function(data) {
             document.getElementById("u39_input").value=data[0]['workshops_title'];
             UE.getEditor('editor').setContent(data[0]['workshops_content']);
-            document.getElementById('u35_input').style.visibility="visible";
+            document.getElementById('u35_input').style.display="block";
+            document.getElementById('u35_input2').style.display="none";
           }
         });
          }
@@ -244,7 +247,8 @@
             document.getElementById("u39_input").value="";
             document.getElementById("u43_input").value="-1";
             UE.getEditor('editor').setContent("");
-            document.getElementById('u35_input').style.visibility="hidden";
+            document.getElementById('u35_input2').style.display="block";
+            document.getElementById('u35_input').style.display="none";
           }
         });
       }
@@ -276,7 +280,8 @@
             document.getElementById("u43_input").value="-1";
             UE.getEditor('editor').setContent("");
             document.getElementById("u39_input").value="";
-            document.getElementById('u35_input').style.visibility="hidden";
+            document.getElementById('u35_input2').style.visibility="visibility";
+            document.getElementById('u35_input').style.display="none";
            }
         });
       }
@@ -307,7 +312,8 @@
             document.getElementById("u43_input").value="-1";
             UE.getEditor('editor').setContent("");
             document.getElementById("u39_input").value="";
-            document.getElementById('u35_input').style.visibility="hidden";
+            document.getElementById('u35_input2').style.display="block";
+            document.getElementById('u35_input').style.display="none";
            }
         });
       }

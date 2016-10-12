@@ -1,4 +1,33 @@
     <link href="<?= base_url('files/contact/styles.css')?>" type="text/css" rel="stylesheet"/>
+    <script src="<?php echo base_url('resources/scripts/jquery-ui-1.8.10.custom.min.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/axQuery.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/globals.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axutils.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/annotation.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/axQuery.std.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/doc.js')?>"></script>
+    <script src="<?php echo base_url('data/document.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/messagecenter.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/events.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/action.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/expr.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/geometry.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/flyout.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/ie.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/model.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/repeater.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/sto.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/utils.temp.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/variables.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/drag.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/move.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/visibility.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/style.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/adaptive.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/tree.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/init.temp.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/legacy.js')?>"></script>
+    <script src="<?php echo base_url('resources/scripts/axure/viewer.js')?>"></script>
     <div id="base" class="">
       <div id="u16" class="ax_image">
         <img id="u16_img" class="img " src="<?= base_url('images/contact/u16.png')?>"/>
@@ -42,32 +71,9 @@
         </div>
       </div>
 
-       <form class="form-horizontal" role="form" method="post" id="Info" enctype="multipart/form-data">
-      <div id="u28" class="ax_文本框_单行_" data-label="Name_apply">
-        <input id="u28_input" type="text" name="name" value="" required />
-      </div>
-
-      <div id="u29" class="ax_文本框_单行_" data-label="Moblie_apply">
-        <input id="u29_input" type="text" value="" name="tel" required/>
-      </div>
-
-      <div id="u30" class="ax_文本框_单行_" data-label="Major_apply">
-        <input id="u30_input" type="text" value="" name="school" required/>
-      </div>
-
-      <div id="u31" class="ax_文本框_多行_" data-label="Message_apply">
-        <textarea id="u31_input" name="message" required required></textarea>
-      </div>
-
-      <div id="u32" class="ax_image">
-        <input type="submit" value="" onClick="javascript:Info.action='<?= site_url("contact/contact_us/")?>';javascript:Info.target='_self';" style="left:0px;position:absolute;z-index:1000;cursor:pointer;border:0px;background:rgba(0, 0, 0, 0);width: 136px;height: 40px;">
-       <img id="u32_img" class="img " src="<?= base_url('images/contact/u32.png')?>"/>
-        <div id="u33" class="text">
-          <p><span></span></p>
-        </div>
-      </div>
-      </form>
-
+     <div id="img_div" style="width: 720px;height: 450px;position: absolute;left: 372px;top: 788px;">
+       <img src="<?= base_url('documents/contact/').'/'.$old_img?>" style="width: 100%;height: 100%">
+     </div>
       <div id="u34" class="ax_内部框架">
         <iframe id="u34_input" scrolling="auto" frameborder="0"></iframe>
       </div>

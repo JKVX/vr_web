@@ -10,15 +10,15 @@
       <div id="u9" class="ax_形状">
       </div>
 
-      <a href="<?= site_url('teambuild/addnewitem')?>" style="text-decoration:none;" onMouseOut ="over2('u11_img')" onMouseOver ="down2('u11_img')">
+      <a href="<?= site_url('teambuild/teambuild_photo')?>" style="text-decoration:none;" onMouseOut ="over2('u11_img')" onMouseOver ="down2('u11_img')">
       <div id="u11" class="ax_形状">
         <img id="u11_img" class="img " src="<?= base_url('images/research/u24.png')?>"/>
         <div id="u12" class="text">
-          <p><span>&nbsp; &nbsp; 新建动态</span></p></a>
+          <p><span>&nbsp; &nbsp; 往期照片</span></p></a>
         </div>
       </div>
       </a>
-
+<!-- 
     <a href="<?= site_url('teambuild/manageteambuild')?>" style="text-decoration:none;" onMouseOut ="over2('u13_img')" onMouseOver ="down2('u13_img')">
       <div id="u13" class="ax_形状">
         <img id="u13_img" class="img " src="<?= base_url('images/research/u24.png')?>"/>
@@ -35,7 +35,7 @@
         <p><span>&nbsp; &nbsp; 往期照片</span></p></a>
         </div>
       </div>
-      </a>
+      </a> -->
 
       <script type="text/javascript">
   function over2(id){

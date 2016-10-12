@@ -29,12 +29,12 @@
       <div id="u50" class="ax_形状">
         <img id="u50_img" class="img " src="<?= base_url('images/research/u24.png')?>"/>
         <div id="u51" class="text">
-          <p><span>&nbsp; &nbsp; 角色管理</span></p><
+          <p><span>&nbsp; &nbsp; 角色管理</span></p>
         </div>
       </div>
       </a>
 
-<form class="form-horizontal" role="form" method="post" id="Info" enctype="multipart/form-data">
+<!-- <form class="form-horizontal" role="form" method="post" id="Info" enctype="multipart/form-data">
 <input type="text" name="id" id="members_id" hidden="hidden" required>
 <div id="u33" class="ax_h1">
   <div id="u34" class="text">
@@ -59,7 +59,7 @@
   <textarea id="u38_textarea" name="members_intro" required></textarea>
   <input type="submit"  id="u38_button" value="更新信息" onClick="javascript:Info.action='<?= site_url("members/update_members/")?>';javascript:Info.target='_self';" style="visibility:hidden"/>
 </div>  
-</form>
+</form> -->
       <div id="u39" class="ax_h1">
         <img id="u39_img" class="img " src="<?= base_url('resources/images/transparent.gif')?>"/>
         <div id="u40" class="text">
@@ -91,6 +91,10 @@
         <input id="u44_input" type="submit" value="下移" onclick="down_members()"/>
       </div>
 
+      <div id="j1" class="ax_html__">
+        <input id="j2" type="submit" value="编辑成员" onclick="edit_members()" />
+      </div>
+
       <div id="u45" class="ax_image">
         <img id="u45_img" class="img " src="<?= base_url('images/deletemember/u37.png')?>"/>
         <div id="u46" class="text">
@@ -105,9 +109,14 @@
   function down2(id){
     document.getElementById(id).src="<?= base_url('images/research/u24_mouseOver.png')?>";
   }
+  function edit_members(){
+    if($("#u41_input").val()!="-1"&&$("#u41_input").val()!="-2"&&$("#u41_input").val()!=null){
+          window.location.href="<?= site_url('members/edit_member/')?>"+"/"+$("#u41_input").val();       
+    }
+  }
+   
       function get_members_detail(){
        if($("#u41_input").val()!=-1&&$("#u41_input").val()!=-2&&$("#u41_input").val()!=null){
-        document.getElementById('u38_button').style.visibility="visible";
         $
         .ajax({
           type : "post",
@@ -120,18 +129,10 @@
             var image=document.getElementById('u45_img');
             var path="<?= base_url('documents/members/')?>"+"/"+data[0]['pic_name'];
             image.src=path;
-            $("#u34_input").val(data[0]['members_name']);
-            $("#u36_select").val(data[0]['role_id']);
-            $("#u38_textarea").val(data[0]['members_intro']);
-            $('#members_id').val($("#u41_input").val());
           }
         });
       }else{
-        document.getElementById('u38_button').style.visibility="hidden";
         document.getElementById('u45_img').src="<?= base_url('images/deletemember/u37.png')?>";
-        $("#u34_input").val("");
-        $("#u36_select").val("");
-        $("#u38_textarea").val("");
         $("#u41_input").val("-2");
       }
       }

@@ -83,6 +83,12 @@
       function down2(id){
         document.getElementById(id).src="<?= base_url('images/research/u24_mouseOver.png')?>";
       }
+
+      function pre_view(){
+        var url = window.URL.createObjectURL(document.getElementById("u45_input").files[0])
+        document.getElementById("u38_img").src=url;
+      }
+
       function get_techniques_detail(){
         if($("#u50_input").val()!=-1&&$("#u50_input").val()!=null){
         $
@@ -204,7 +210,7 @@
 
      <form class="form-horizontal" role="form" method="post" id="Info" enctype="multipart/form-data">
       <div id="u45" class="ax_html__">
-        <input id="u45_input" type="file" value="打开文件" name="pic_name" required="required"/>
+        <input id="u45_input" type="file" value="打开文件" name="pic_name" required="required" onchange="pre_view()" />
       </div>
       <div id="u44" class="ax_文本框_单行_">
         <input id="u44_input" type="text" value="" name="techniques_name" required="required"/>

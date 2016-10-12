@@ -23,7 +23,7 @@
       <div id="u13" class="ax_形状">
         <img id="u13_img" class="img " src="<?= base_url('images/research/u24.png')?>"/>
         <div id="u14" class="text">
-          <p><span>&nbsp; &nbsp; 已有项目管理</span></p>
+          <p><span>&nbsp; &nbsp; 已有项目</span></p>
         </div>
       </div>
       </a>

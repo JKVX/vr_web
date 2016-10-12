@@ -68,11 +68,7 @@ class Members extends CI_Controller
      *添加成员
      */
     public function add_members(){
-        if(count($this->members->get_by_pic_name($_FILES["pic_name"]["name"]))>0){
-            echo "<script>alert('已存在同名图片,添加设备失败！')</script>";
-            $this->addnewmember();
-        }
-        else if (($_FILES["pic_name"]["size"] < MAXSIZE*1024*1024)){
+      if (($_FILES["pic_name"]["size"] < MAXSIZE*1024*1024)){
             if ($_FILES["pic_name"]["error"] > 0){
                 show_error($_FILES["pic_name"]["error"]);
             }else{
@@ -80,9 +76,12 @@ class Members extends CI_Controller
                 if (!is_dir($save_dir)){ 
                     mkdir(iconv("UTF-8", "GBK", $save_dir),0777,true); 
                 }
-                $save_path=iconv("UTF-8", "GBK", $save_dir.$_FILES["pic_name"]["name"]);         
+                $file_name=$_FILES["pic_name"]["name"];
+                $file_name=strrchr($file_name,'.');
+                $file_name=time().'_'.rand().$file_name;
+                $save_path=iconv("UTF-8", "GBK", $save_dir.$file_name);         
                 $if_success=move_uploaded_file($_FILES["pic_name"]["tmp_name"],$save_path);
-                $_POST['pic_name']=$_FILES["pic_name"]["name"];       
+                $_POST['pic_name']=$file_name;       
                 $this->members->insert($_POST);
                 echo "<script>alert('添加成员成功！')</script>";
                 $this->addnewmember();
@@ -98,6 +97,15 @@ class Members extends CI_Controller
      */
      public function delete_members(){
           $this->members->delete_members($_POST['id']);
+    }
+
+    public function edit_member(){
+        $projects_id = $this->uri->segment(3, 0);
+        $data['member_role']=$this->member_role->get_all_member_role();
+        $data['members']=$this->members->get_by_id($projects_id)[0];
+        $this->load->view('templates/header');
+        $this->load->view('templates/back_index_header');
+        $this->load->view('members/editmember',$data);
     }
 
     /**
@@ -123,9 +131,35 @@ class Members extends CI_Controller
      *更新成员信息成功
      */
     public function update_members(){
-        $result=$this->members->update_members($_POST);
+        $members=$this->members->get_by_id($_POST['id']);
+        //调用代码
+        $count=$_FILES["pic_name"]['name'];
+        if($count!=""):
+            $save_dir=dirname(dirname(dirname(__FILE__)))."/documents/members/";
+            if (!is_dir($save_dir)){ 
+                    mkdir(iconv("UTF-8", "GBK", $save_dir),0777,true); 
+            }
+            if($_FILES["pic_name"]["size"]>MAXSIZE*1024*1024){
+                show_error("文件最大".MAXSIZE."M,您的文件大小为".round(($_FILES["pic_name"]["size"]/1024/1024),2)."M");
+            } 
+            if ($_FILES["pic_name"]["error"] > 0){
+                show_error("上传出错，错误代码 ".$_FILES["pic_name"]["error"]);
+            }else{
+                $file_name=$_FILES["pic_name"]["name"];
+                $file_name=strrchr($file_name,'.');
+                $file_name=time().'_'.rand().$file_name;
+                $save_path=iconv("UTF-8", "GBK", $save_dir.$file_name);         
+                $if_success=move_uploaded_file($_FILES["pic_name"]["tmp_name"],$save_path);
+                $delete_path=$save_dir.$members[0]['pic_name'];
+                unlink($delete_path);
+                $_POST['pic_name']= $file_name;
+            }
+        endif;
+        if($count==0):
+            $_POST['pic_name']=$members[0]['pic_name'];
+        endif;
+        $this->members->update_members($_POST);
         echo "<script>alert('更新成员信息成功！')</script>";
-        
         $this->deletemember();
     }
     /*members函数--------------------END------------------*/

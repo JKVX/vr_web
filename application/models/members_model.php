@@ -101,14 +101,13 @@ class Members_model extends CI_Model
      */
     public function update_members($data){
         $members=$this->get_by_id($data['id'])[0];
-        $members['members_intro']=$data['members_intro'];
-        $members['members_name']=$data['members_name'];
         if($members['role_id']!=$data['role_id']){
             $members['role_id']=$data['role_id'];
             $this->delete_members($members['id']);
-            $this->insert($members);
+            unset($data['id']);
+            $this->insert($data);
         }else{
-            $this->update($members);
+            $this->update($data);
         }
     }
 

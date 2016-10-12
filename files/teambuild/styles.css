@@ -540,12 +540,12 @@
 }
 /*-------------------------归零样式END，请于样式表最前面调用-------------------------*/
 /*-----------------自定义按钮样式，移动端不需要，PC端根据实际情况选择----------------*/
-.demo {width: 1280px;height: 600px;font-size: 14px;position:absolute;top:334px;margin-left: auto;margin-right:auto;}
-.demo a.control {position:absolute;display: block;top: 50%;margin-top: -78px;width: 76px;height: 112px;cursor: pointer;z-index: 2;background: url(../../images/teambuild/buttons.png) no-repeat}
-.demo a.prev {top:400px;left: 0;background-position: 0 0}
-.demo a.next {top:400px;right: 0;background-position: -76px 0}
-.demo a.prev:hover {background-position: 0 -112px}
-.demo a.next:hover {background-position: -76px -112px}
+.demo {width: 1080px;height: 600px;font-size: 14px;position:absolute;top:334px;left:100px;margin-left: auto;margin-right:auto;}
+.demo a.control {background-color:; position:absolute;display: block;top: 0;border-radius: 5px;margin-top: -78px;width: 40px;height: 60px;cursor: pointer;z-index: 2;background: url(../../images/home/slider-arrow.png)  #000 no-repeat;filter:alpha(opacity=50);opacity:0.5;display: none}
+.demo a.prev {top:400px;background-position: -166px 14px}
+.demo a.next {top:400px;right: 0px;background-position: -48px 14px}
+.demo a.prev:hover {background-position: -106px 14px;}
+.demo a.next:hover {background-position: 12px 14px}
 .slider{display: none;margin-left: auto;margin-right: auto;}
 #u39 {
   position:absolute;
@@ -595,4 +595,4 @@ a{
 #teambuild_content{
   margin-top: 11px;
   margin-right: 60px;
-}
+} 
