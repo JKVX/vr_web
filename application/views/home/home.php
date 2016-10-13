@@ -23,7 +23,7 @@
         <img id="u28_img" class="img " src="<?= base_url('images/home/u28.png')?>"/>
       </div>
 
-      <div id="u30" class="ax_image">
+      <div id="u30">
         <img id="u30_img" class="img " src="<?= base_url('images/home/u30.png')?>"/>
         <div id="u31">
           <p><?= str_replace(array("\r\n", "\r", "\n"),"<br/>",$slogan['lab_intro'])?></p>
@@ -32,7 +32,7 @@
 
       <div id="u32" class="ax_文本">
         <div id="u33" class="text">
-          <?php for($i=0;$i<count($news)&&$i<3;$i++){?>
+          <?php for($i=0;$i<count($news)&&$i<9;$i++){?>
             <a style="text-decoration:none;" href="<?="/home/news_detail/".$news[$i]['id']?>"><p><span><?= $news[$i]['news_title']?></span><p></a>
           <?php }?>
         </div>
@@ -61,7 +61,7 @@
         
         <div id="u38" class="ax_image">
           <input type="submit" onClick="javascript:Info.action='<?= site_url("home/login/")?>';javascript:Info.target='_self';" style="left:0px;position:absolute;z-index:1000;cursor:pointer;border:1px;width: 150px;background:rgba(0, 0, 0, 0);height: 38px;" value="">
-          <img id="submit_img" src="<?= base_url('images/home/u38.png')?>"/>
+          <!-- <a onclick="log_in()"> --><img id="submit_img" src="<?= base_url('images/home/u38.png')?>"/><!-- </a> -->
         </div>
       </form>
 
@@ -84,7 +84,31 @@ function mouse_out(count){
 function mouse_over(count){
   document.getElementById("u44_img"+count).src="<?= base_url('images/home/u44_selected.png')?>";
 }
-
+function log_in(){
+  $
+        .ajax({
+          type : "post",
+          async : false,
+          dataType : "json", //收受数据格式
+          data:{'username':$("#u42_input").val(),'password':$("#u43_input").val()},
+          url : "<?= site_url("home/login/") ?>",
+          cache : false,  
+          success : function(data) {
+            alert(data);
+            /*if(data=="1"||data=="2"){
+              alert("登陆成功！");
+              window.location.href="<?= site_url("home/home_admin/")?>";
+            }else if(data=="3"||data=="4"){
+              alert("登陆成功！");
+              window.location.href="<?= site_url("research/research_admin/") ?>";
+            }else if(data==-1){
+              alert("用户名不存在");
+            }else{
+              alert("密码错误");
+            }*/
+          }
+        });
+}
 $(".panel_state").hover(
   function(){
     $(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.5)
@@ -101,7 +125,10 @@ window.onload=function(){
   <?php for($i=0;$i<count($wheel_pic);$i++):?>
     wheel_pic[<?= $i?>]="<?= $wheel_pic[$i]?>";
   <?php endfor;?>
-  load_img(0);
+  <?php if(count($wheel_pic)!=0):?>
+    load_img(0);
+  <?php endif;?>
+
 }
 
 function load_img(count){
@@ -120,7 +147,7 @@ function load_img(count){
     // Resize the panorama
     autoload:true,
     loading_msg:"图片太大啦，正在加载~",
-    loading_img: '<?= base_url('documents/wheel_pic/background.jpg'); ?>',
+    //loading_img: '<?= base_url('documents/wheel_pic/background.jpg'); ?>',
     size: {
       width: '100%',
       height: '854px'

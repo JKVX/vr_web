@@ -43,11 +43,11 @@ body {
 	position: relative;
 	float: left
 	;width:86px;
-	height: 155px;
+	height: 153px;
 	color:#cccccc;
-	font-family:'汉仪细简黑简 Regular', '汉仪细简黑简';
+	font-family:'汉仪细简黑简', '汉仪细简黑简';
 	font-style:normal;
-	font-size:19pt;
+	font-size:25px;
 	cursor: pointer;
   	z-index: 100;
 }
@@ -59,11 +59,11 @@ body {
 	position: relative;
 	float: left;
 	width:122px;
-	height:155px;
+	height:153px;
 	color:#cccccc;
-	font-family:'汉仪细简黑简 Regular', '汉仪细简黑简';
+	font-family:'汉仪细简黑简', '汉仪细简黑简';
   	font-style:normal;
-  	font-size:19pt;
+  	font-size:25px;
   	z-index: 100;
 }
 .p_b{

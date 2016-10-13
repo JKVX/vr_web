@@ -6,50 +6,17 @@
           <p><span></span></p>
         </div>
       </div>
-   <!--  <?php if($type==1):?>
-     <div id="u16" class="ax_形状">
-       <img id="u16_img" class="img " src="<?= base_url('images/research/u16.png')?>"/>
-       <div id="u17" class="text">
-         <p><span></span></p>
-       </div>
-     </div>
-     
-     <div id="teambuild_list"  >
-     <?php for($i=0;$i<count($teambuild_list);$i++):?>
-       <div id="<?= $i?>" class="teambuild_list_div">
-       <a href="<?= site_url('teambuild/teambuild_detail').'/'.$teambuild_list[$i]['id'] ?>">
-         <p class="teambuild_list_p"><span><?= $teambuild_list[$i]['title']?></span></p>
-       </a>
-       <?php if($teambuild['id']==$teambuild_list[$i]['id']){?>
-         <img  src="<?=base_url('images/research/u24_mouseOver.png')?>" id="<?= $i.'img'?>" class="teambuild_list_img"/>
-       <?php }else{ ?>
-         <img  src="<?=base_url('images/research/u24.png')?>" id="<?= $i.'img'?>" class="teambuild_list_img"/>
-       <?php }?>
-       </div>
-     <?php endfor;?>
-     <a href="<?= site_url('teambuild/show_teambuild_photo')?>"><p id="photo_p"><span>往期照片</span></p></a>
-     </div>
-   
-     <?php if(isset($teambuild)):?>
-     <div id="teambuild_detail" class="autoScroll" style="overflow-x:auto;overflow-y:auto;">
-       <div id="teambuild_title"><?= $teambuild['title']?></div>
-       <div id="teambuild_content"><?= $teambuild['content']?></div>
-     </div>
-   <?php endif;?>
-   <?php endif;?> -->
-
+      <div id="load_img_div" style="position: absolute;z-index: 109"></div>
+      <a onclick="small()"><img src="" style="visibility: hidden;position:absolute;z-index:110" id="load_img"/></a>
     <?php if($type==0):?>
       <div id="u39">
-        <div id="u40">
-          <p><span>往期照片</span></p>
-        </div>
       </div>
       <div class="demo">
       <div class="prev_next"><a class="control prev"></a><a class="control next abs"></a></div>
         <div class="slider"><!--主体结构，请用此类名调用插件，此类名可自定义-->
           <ul>
           <?php for($i=0;$i<count($teambuild_photo);$i++):?>
-            <li><a href="javascript:void(0);" style="list-style: none;cursor: default;"><img src="<?= base_url('documents/teambuild_photo/'.$teambuild_photo[$i]['pic_name'])?>" alt="<?= $teambuild_photo[$i]['content']?>" /></a></li>
+            <li><a href="javascript:void(0);" style="list-style: none;" onclick="preview('<?= base_url('documents/teambuild_photo/'.$teambuild_photo[$i]['pic_name'])?>')"><img src="<?= base_url('documents/teambuild_photo/'.$teambuild_photo[$i]['pic_name'])?>" alt="<?= $teambuild_photo[$i]['content']?>" /></a></li>
           <?php endfor;?>
           </ul>
         </div>
@@ -72,12 +39,37 @@
           });
       </script>
       <script type="text/javascript">
+      
         $(".demo").hover(function(){
             $(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.5)
         },
         function(){
             $(this).find(".prev,.next").fadeOut()
         });
+        function preview(url){
+          var imgWidth=document.body.clientWidth*1.2;
+          var imgHeight=imgWidth/1080*660;
+          var width=Math.round((document.body.clientWidth-imgWidth)/2);
+          var height=Math.round((document.body.clientHeight-imgHeight)/2);
+          document.getElementById("load_img").src=url;
+          document.getElementById("load_img").style.visibility="visible";
+          document.getElementById("load_img").style.height=imgHeight+"px";
+          document.getElementById("load_img").style.width=imgWidth+"px";
+          document.getElementById("load_img_div").style.visibility="visible";
+          document.getElementById("load_img_div").style.width=document.body.clientWidth+"px";
+          document.getElementById("load_img_div").style.height=document.body.clientHeight+"px";
+          document.getElementById("load_img_div").style.backgroundColor="black";
+          document.getElementById("load_img_div").style.opacity=1;
+          $("#load_img").css({'top':height,'left':width}); 
+          $("#load_img_div").css({'top':0,'left':0}); 
+        }
+        function small(){
+          document.getElementById("load_img").src="";
+          document.getElementById("load_img").style.visibility="hidden";
+          document.getElementById("load_img_div").style.visibility="hidden";
+          document.getElementById("load_img").style.height=0;
+          document.getElementById("load_img").style.width=0;
+        }
       </script>
     <?php endif;?>
 <!-- <script type="text/javascript">

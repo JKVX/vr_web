@@ -47,7 +47,7 @@
 
       <div id="u29" class="ax_h1">
         <div id="u30" class="text">
-          <p><span>增加成员</span></p>
+          <p><span>编辑成员</span></p>
         </div>
       </div>
 

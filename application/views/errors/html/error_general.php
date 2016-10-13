@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 
-<div class="container">
+<div class="container" style="font-size: 20px;">
     <h1><?php echo $heading; ?></h1>
     <?php echo $message; ?>
     <hr />

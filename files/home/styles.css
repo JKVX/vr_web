@@ -215,7 +215,7 @@
   word-wrap:break-word;
   font-style:normal;
   font-size:30px;
-  font-family:'汉仪细简黑简 Regular', '汉仪细简黑简';
+  font-family:'汉仪细简黑简', '汉仪细简黑简';
   margin-top:81px;
   color: #666666;
   top:0px;
@@ -232,7 +232,7 @@
   font-family:'微软雅黑 Light', '微软雅黑';
   font-weight:290;
   font-style:normal;
-  font-size:20pt;
+  font-size:20px;
   color:#999999;
   letter-spacing:100; 
 }

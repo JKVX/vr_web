@@ -31,7 +31,7 @@ class Wheel_pic_model extends CI_Model
         if(count($id)!=0){
             /*判断是否找到最后一个正在进行的项目*/
             $down_id=$id[0]['id'];        
-            while ($count<3&&$down_id!=-2) {
+            while ($down_id!=-2) {
                 $tmp_result=$this->get_by_id($down_id)[0];
                 $result[$count++]=$tmp_result['pic_name'];
                 $down_id=$tmp_result['down_id'];

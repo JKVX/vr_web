@@ -309,7 +309,7 @@ top:669px; */
   left:0px;
   top:246px;
   width:319px;
-  font-family:'汉仪细简黑简 Regular', '汉仪细简黑简';
+  font-family:'汉仪细简黑简', '汉仪细简黑简';
   font-style:normal;
   font-size:26px;
   color:#666666;
@@ -339,7 +339,7 @@ top:669px; */
   top:258px;
   width:198px;
   height:32px;
-  font-family:'汉仪细简黑简 Bold', '汉仪细简黑简';
+  font-family:'汉仪细简黑简', '汉仪细简黑简';
   font-weight:700;
   font-style:normal;
   font-size:26px;
@@ -388,7 +388,7 @@ top:669px; */
 #f_projects_div {
   position:relative;
   width:100;
-  font-family:'汉仪细简黑简 Regular', '汉仪细简黑简';
+  font-family:'汉仪细简黑简', '汉仪细简黑简';
   font-weight:400;
   font-style:normal;
   font-size:26px;
@@ -440,7 +440,7 @@ top:669px; */
   top:365px;
   width:109px;
   height:32px;
-  font-family:'汉仪细简黑简 Bold', '汉仪细简黑简';
+  font-family:'汉仪细简黑简', '汉仪细简黑简';
   font-weight:700;
   font-style:normal;
   font-size:26px;
@@ -491,7 +491,7 @@ top:669px; */
   top:421px;
   width:298px;
   height:32px;
-  font-family:'汉仪细简黑简 Bold', '汉仪细简黑简';
+  font-family:'汉仪细简黑简', '汉仪细简黑简';
   font-weight:700;
   font-style:normal;
   font-size:26px;
@@ -542,7 +542,7 @@ top:669px; */
   top:475px;
   width:109px;
   height:32px;
-  font-family:'汉仪细简黑简 Bold', '汉仪细简黑简';
+  font-family:'汉仪细简黑简', '汉仪细简黑简';
   font-weight:700;
   font-style:normal;
   font-size:26px;
@@ -593,7 +593,7 @@ top:669px; */
   top:530px;
   width:136px;
   height:32px;
-  font-family:'汉仪细简黑简 Bold', '汉仪细简黑简';
+  font-family:'汉仪细简黑简', '汉仪细简黑简';
   font-weight:700;
   font-style:normal;
   font-size:26px;
@@ -644,7 +644,7 @@ top:669px; */
   top:581px;
   width:190px;
   height:32px;
-  font-family:'汉仪细简黑简 Bold', '汉仪细简黑简';
+  font-family:'汉仪细简黑简', '汉仪细简黑简';
   font-weight:700;
   font-style:normal;
   font-size:26px;
@@ -956,7 +956,7 @@ top:669px; */
   z-index: 100;
   margin-left:38px; 
   margin-top:12px; 
-  font-family:'汉仪细简黑简 Regular', '汉仪细简黑简';
+  font-family:'汉仪细简黑简', '汉仪细简黑简';
   font-style:normal;
   font-size:20px;
   vertical-align: center;
@@ -980,7 +980,7 @@ top:669px; */
   margin-top: 62px;
 }
 #summary_div{
-   font-family:'汉仪细简黑简 Bold', '汉仪细简黑简';
+   font-family:'汉仪细简黑简', '汉仪细简黑简';
   font-weight:700;
   font-style:normal;
   font-size:20pt;

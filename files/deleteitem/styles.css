@@ -529,6 +529,7 @@
   top:500px;
   width:100px;
   height:40px;
+  
 }
 #u37_input {
   position:absolute;
@@ -544,6 +545,31 @@
   color:#000000;
   text-align:center;
 }
+
+
+#u372 {
+  position:absolute;
+  left:780px;
+  top:500px;
+  width:100px;
+  height:40px;
+  visibility: hidden;
+}
+#u372_input {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:100px;
+  height:40px;
+  font-family:'微软雅黑 Bold', '微软雅黑';
+  font-weight:700;
+  font-style:normal;
+  font-size:20px;
+  text-decoration:none;
+  color:#000000;
+  text-align:center;
+}
+
 
 #u47 {
   position:absolute;

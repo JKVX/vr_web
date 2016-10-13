@@ -9,20 +9,20 @@
       <div id="u9" class="ax_形状">
       </div>
 
-      <a href="<?= site_url('research/addnewitem')?>" style="text-decoration:none;" onMouseOut ="over2('u11_img')" onMouseOver ="down2('u11_img')">
+      <a href="<?= site_url('research/deleteitem')?>" style="text-decoration:none;" onMouseOut ="over2('u11_img')" onMouseOver ="down2('u11_img')">
       <div id="u11" class="ax_形状">
         <img id="u11_img" class="img " src="<?= base_url('images/research/u24.png')?>"/>
         <div id="u12" class="text">
-          <p><span>&nbsp; &nbsp;新建项目</span></p>
+          <p><span>&nbsp; &nbsp;已有项目</span></p>
         </div>
       </div>
       </a>
 
-      <a href="<?= site_url('research/deleteitem')?>" style="text-decoration:none;" onMouseOut ="over2('u13_img')" onMouseOver ="down2('u13_img')">
+      <a href="<?= site_url('research/addnewitem')?>" style="text-decoration:none;" onMouseOut ="over2('u13_img')" onMouseOver ="down2('u13_img')">
       <div id="u13" class="ax_形状">
         <img id="u13_img" class="img " src="<?= base_url('images/research/u24.png')?>"/>
         <div id="u14" class="text">
-          <p><span>&nbsp; &nbsp;已有项目</span></p>
+          <p><span>&nbsp; &nbsp;新建项目</span></p>
         </div>
       </div>
       </a>
@@ -79,6 +79,29 @@
   function down2(id){
     document.getElementById(id).src="<?= base_url('images/research/u24_mouseOver.png')?>";
   }
+  function check(){
+    var flag=true;
+    if($("#u108").val()=="0"){
+    $
+            .ajax({
+              type : "post",
+              async : false,
+              dataType : "json", //收受数据格式
+              data:{'id':$("#id").val()},
+              url : "<?= site_url("research/get_video_num/") ?>",
+              cache : false,
+              success : function(data) {
+                if(data=="1"){
+                  alert('已存在DEMO视频，无法上传');
+                  flag=false;
+                }
+              }
+            });
+          }
+      if(!flag){
+        return false;
+      }
+  }
       </script>
 
       <div id="u111" class="ax_h1">
@@ -87,8 +110,8 @@
         </div>
       </div>
 
-      <form class="form-horizontal" role="form" method="post" id="Info" enctype="multipart/form-data">
-      <input name="id" hidden="hidden" type="text" value="<?= $projects['id']?>">
+      <form class="form-horizontal" role="form" method="post" id="Info" enctype="multipart/form-data" onsubmit="return check()">
+      <input name="id" id="id" hidden="hidden" type="text" value="<?= $projects['id']?>">
       <div id="u103" class="ax_html__">
         <input id="u104" name="pic_name" type="file" value="打开文件" required />
       </div>

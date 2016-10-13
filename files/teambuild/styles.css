@@ -575,7 +575,7 @@
   white-space:nowrap;text-overflow:ellipsis;overflow:hidden;height:40px;width:262px;position:absolute;
   margin-left:38px;
   margin-top: 10px;
-  font-family:'汉仪细简黑简 Bold', '汉仪细简黑简';
+  font-family:'汉仪细简黑简', '汉仪细简黑简';
   color: #666666;
 }
 .teambuild_list_img{

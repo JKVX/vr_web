@@ -51,10 +51,10 @@ class Account_model extends CI_Model
      *插入一条account
      *@param$name
      */
-    public function loginAuthorize($feature_name,$controller_name)
+    public function loginAuthorize($controller_name,$feature_name)
     {
         /*判断是否是不需要验证的方法*/
-    	if ($feature_name == "index"||$feature_name == "news_detail"||$feature_name=="projects_detail"||$feature_name=="login"||$feature_name=="teambuild_detail"||$feature_name=="show_teambuild_photo"||$feature_name=="contact_us") {
+    	if ($feature_name == "index"||$feature_name == "news_detail"||$feature_name=="projects_detail"||$feature_name=="login") {
             return TRUE;
         }
         /*判断用户是否登陆*/
@@ -75,12 +75,12 @@ class Account_model extends CI_Model
         $role=$this->get_by_id($user_id)[0]['role'];
         switch ($role) {
             case '4':
-                if (($controller_name == "home"&&$feature_name!="admin")||$controller_name == "intro"||$controller_name=="members"||$controller_name=="research"||$controller_name=="teambuild"||$controller_name=="contact") {
+                if ($controller_name == "home"&&$feature_name!="index"||$controller_name == "intro"||$controller_name=="members"||$controller_name=="teambuild"||$controller_name=="contact") {
                     return FALSE;
                 }        
                 break;
             case '3':
-                if (($controller_name == "home"&&$feature_name!="admin")||$controller_name == "intro"||$controller_name=="members"||$controller_name=="contact") {
+                if ($controller_name == "home"&&$feature_name!="index"||$controller_name == "intro"||$controller_name=="contact") {
                     return FALSE;
                 }    
                 break;

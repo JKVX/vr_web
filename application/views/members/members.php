@@ -8,7 +8,7 @@
         <div style="width: 1280px;height: 420px;">
           <div id="head">
             <div id="head_name"><p><?= $member_role[$i]['role_name'] ?></p></div>
-            <div id="head_line"><hr></div>
+            <div id="head_line" class="head_line"><hr></div>
           </div>
           <?php for ($j=0;$j<$members_count;$j++) :?>
             <div id="<?= $members[$i][$j]['id']?>" style="position:relative;float: left;width:280px;left: 50px;margin-bottom: 20px;" onMouseOut ="over2(this)" onMouseOver ="down2(this)">
@@ -45,6 +45,12 @@
       </div>
 
       <script type="text/javascript">
+      window.onload=function(){
+        $(".head_line").each(function(index,element){
+          var width=984-$(this).prev().width();
+          $(this).width(width+"px");
+        });         
+      }
         function over2(obj){
           var members_id=obj.id;
           $("#intro"+members_id).css('display','none');

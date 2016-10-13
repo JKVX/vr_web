@@ -91,7 +91,7 @@
             </tbody>
           </table>
           <div id="page_div">
-            <ul id="page_ul1" class="page_ul"></ul>
+            <ul id="page_ul1" class="page_ul" <?php if(count($pic1)==1): ?> style="visibility: hidden;" <?php endif;?> ></ul>
           </div>
         </div>
       <?php endif;?>
@@ -117,7 +117,7 @@
             </tbody>
           </table>
           <div id="page_div">
-            <ul id="page_ul2" class="page_ul"></ul>
+            <ul id="page_ul2" class="page_ul" <?php if(count($pic2)==1): ?> style="visibility: hidden;" <?php endif;?>></ul>
           </div>
         </div>
       <?php endif;?>

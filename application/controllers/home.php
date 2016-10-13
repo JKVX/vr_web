@@ -33,10 +33,17 @@ class Home extends CI_Controller
     /**
      *网站后台默认初始化页面
      */
-    public function admin(){
-        $this->load->view('templates/header');
-        $this->load->view('templates/back_index_header');
-        $this->load->view('home/admin');
+    public function admin($role){
+        switch ($role) {
+            case 1:
+            case 2:
+                redirect(site_url('home/home_admin'));
+                break;
+            case 3:
+            case 4:
+                redirect(site_url('research/research_admin'));
+                break;
+        }
     }
 
     /**
@@ -66,7 +73,7 @@ class Home extends CI_Controller
         $data['news']=$this->news->get_by_id($news_id)[0];
         $data['news_list']=$this->news->get_all_news();
         $this->load->view('templates/header');
-        $this->load->view('templates/back_index_header');
+        $this->load->view('templates/index_header');
         $this->load->view('home/news_detail',$data);
     }
 
@@ -112,7 +119,7 @@ class Home extends CI_Controller
                 $this->session->set_userdata('username',$user[0]['username']);
                 $current = time();
                 $this->session->set_userdata('lastActiveTime', $current);
-                $this->admin();
+                $this->admin($user[0]['role']);
             }else{
                 $this->index();
                 $data['message']="密码错误！";

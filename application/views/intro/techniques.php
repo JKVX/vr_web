@@ -117,7 +117,7 @@
           url : "<?= site_url("intro/delete_techniques/") ?>",
           cache : false,
           success : function(data) {
-            alert('删除设备成功');
+            alert('删除技术成功');
             $(document).find("option[name='"+$("#u50_input").val()+"']").remove();
             document.getElementById("u50_input").value="-1";
             document.getElementById('u38_img').src="<?= base_url('images/wheel_pic/u18.png')?>";
@@ -136,7 +136,7 @@
           url : "<?= site_url("intro/up_techniques/") ?>",
           cache : false,
           success : function(data) {
-            alert('移动设备成功');
+            alert('移动技术成功');
             var addHtml="";
            for(var i=0;i<data.length;i++){
             addHtml=addHtml+"<option name=\""+data[i]['id']+"\"";
@@ -165,7 +165,7 @@
           url : "<?= site_url("intro/down_techniques/") ?>",
           cache : false,
           success : function(data) {
-            alert('移动设备成功');
+            alert('移动技术成功');
             var addHtml="";
            for(var i=0;i<data.length;i++){
             addHtml=addHtml+"<option name=\""+data[i]['id']+"\"";

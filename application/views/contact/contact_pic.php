@@ -25,7 +25,7 @@
           <img src="<?= base_url('documents/contact/').'/'.$old_img?>" id="old_img">
         </div>
         <form class="form-horizontal" role="form" method="post" id="Info" enctype="multipart/form-data">
-        <div id="j3"><p><span>替换图片</span></p></div>
+        <div id="j3"><p><span>替换图片</span><span>(长宽比8:5)</span></p></div>
         <div id="j4">
           <img id="new_img" src="<?= base_url('images/deletemember/u37.png')?>">
         </div>

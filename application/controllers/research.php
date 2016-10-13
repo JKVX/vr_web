@@ -155,6 +155,16 @@ class Research extends CI_Controller
         $result[1]=$this->projects->get_all_f_projects();
         echo json_encode($result);
     }
+
+    /**
+     *未完成项目按钮触发事件
+     */
+    public function unfinish_projects(){
+        $this->projects->unfinish_projects($_POST['id']);
+        $result[0]=$this->projects->get_all_u_projects();
+        $result[1]=$this->projects->get_all_f_projects();
+        echo json_encode($result);
+    }
         /**
      *完成项目按钮触发事件
      */
@@ -278,7 +288,7 @@ class Research extends CI_Controller
         if($_POST['status']=='0'){
             $query=$this->projects->get_pic($_POST['id'],0);
             if(count($query)!=0){
-                show_error('已存在Demo视频，不可再添加');
+                show_error('已存在Demo视频,无法添加');
             }
         }
         if ($_FILES["pic_name"]["error"] > 0){
@@ -302,5 +312,14 @@ class Research extends CI_Controller
             $this->edit_pic2($_POST['id']);
         }
 
+    }
+
+    public function get_video_num(){
+        $query=$this->projects->get_pic($_POST['id'],0);
+        if(count($query)==0){
+            echo 0;
+        }else{
+            echo 1;
+        }
     }
 }

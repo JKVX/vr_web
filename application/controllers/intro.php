@@ -263,7 +263,7 @@ class Intro extends CI_Controller
     public function add_techniques(){
         if(count($this->techniques->get_by_name($_FILES["pic_name"]["name"]))>0){
             $this->techniques();
-            $data['message']="已存在同名设备图片,添加设备失败！";
+            $data['message']="已存在同名技术图片,添加设备失败！";
             $this->load->view('templates/blank',$data);
         }
         else if (($_FILES["pic_name"]["size"] < MAXSIZE*1024*1024)){

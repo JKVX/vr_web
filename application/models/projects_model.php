@@ -225,8 +225,23 @@ class Projects_model extends CI_Model
      *@param $id
      */
     public function finish_projects($id){
-        $projects=$this->get_by_id($id)[0];
-        
+        $this->change_statue($id,1);
+    }
+
+    /**
+     *根据id变为未完成项目
+     *@param $id
+     */
+    public function unfinish_projects($id){
+        $this->change_statue($id,0);
+    }
+
+    /**
+     *根据id,$status改变对应项目的status
+     *@param $id,$status
+     */
+    public function change_statue($id,$status){
+        $projects=$this->get_by_id($id)[0];       
         $up_id=$projects['up_id'];
         $down_id=$projects['down_id'];
         if($up_id!="-1"){
@@ -240,9 +255,9 @@ class Projects_model extends CI_Model
             $this->update($down_projects);
         }
 
-        $projects['status']=1;
+        $projects['status']=$status;
         $projects['up_id']=-1;
-        $down_id=$this->projects->get_top_id(1);
+        $down_id=$this->projects->get_top_id($status);
         $count=count($down_id);
         if(count($down_id)==0){
             $projects['down_id']=-2;
@@ -257,33 +272,6 @@ class Projects_model extends CI_Model
             $data['up_id']=$id;
             $this->projects->update($data);
         }
-
-        /*$projects=$this->get_by_id($id)[0];
-        $down_id=$projects['down_id'];
-        $up_id=$projects['up_id'];
-        if($up_id!=-1&&$up_id!=-2){
-            $up_projects=$this->get_by_id($up_id)[0];
-            $up_projects['down_id']=$down_id;
-            $this->update($up_projects);
-        }
-        if($down_id!=-2&&$down_id!=-3){
-            $down_projects=$this->get_by_id($down_id)[0];
-            $down_projects['up_id']=$up_id;
-            $this->update($down_projects);    
-        }
-        $mid_id=$this->get_mid_id();
-        if(count($mid_id)!=0){
-            $projects['up_id']=-2;
-            $projects['down_id']=$mid_id[0]['id'];
-            $this->update($projects);
-            $mid_projects=$this->get_by_id($mid_id[0]['id'])[0];
-            $mid_projects['up_id']=$id;
-            $this->update($mid_projects);
-        }else{
-            $projects['up_id']=-2;
-            $projects['down_id']=-3;
-            $this->update($projects);
-        }*/
     }
 }
 

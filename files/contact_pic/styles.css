@@ -58,12 +58,12 @@ body {
 #img_div{height:800px;width: 800px;position: absolute;z-index: 200;left: 400px;top:250px;font-family:'微软雅黑 Bold', '微软雅黑';font-weight:700;font-style:normal;font-size:36px;}
 #j1{position: relative;width: 200px;height: 100px;}
 #j2{position: relative;width: 250px;height: 250px;}
-#j3{position: relative;width: 200px;height: 100px;margin-top:50px}
+#j3{position: relative;width: 400px;height: 100px;margin-top:50px}
 #j4{position: relative;width: 250px;height: 250px;}
-#j5{position: absolute;width: 250px;height: 250px;left: 300px;top: 700px}
-#j6{position: absolute;width: 250px;height: 250px;left: 600px;top: 700px;font-family:'微软雅黑 Bold', '微软雅黑';font-weight:700;font-style:normal;font-size:36px;}
-#old_img{width: 250px;height: 250px}
-#new_img{width: 250px;height: 250px}
+#j5{position: absolute;width: 250px;height: 250px;left: 450px;top: 700px}
+#j6{position: absolute;width: 250px;height: 250px;left: 700px;top: 700px;font-family:'微软雅黑 Bold', '微软雅黑';font-weight:700;font-style:normal;font-size:36px;}
+#old_img{width: 400px;height: 250px}
+#new_img{width: 400px;height: 250px}
 #new_pic{font-family:'微软雅黑 Bold', '微软雅黑';font-weight:700;font-style:normal;font-size:36px;width: 200px;opacity: 0;position: absolute;left: 0px;z-index: 1;}
 #new_pic_input{font-family:'微软雅黑 Bold', '微软雅黑';font-weight:700;font-style:normal;font-size:36px;width: 200px;position: absolute;left: 0px;}
 #new_pic_button{font-family:'微软雅黑 Regular', '微软雅黑';font-weight:700;font-style:normal;font-size:36px;width: 100px}
