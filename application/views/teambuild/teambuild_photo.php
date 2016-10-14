@@ -66,7 +66,7 @@
       <div id="u39" class="ax_h1">
         <img id="u39_img" class="img " src="<?= base_url('resources/images/transparent.gif')?>"/>
         <div id="u40" class="text">
-          <p><span>现有照片</span></p>
+          <p><span>往期照片</span></p>
         </div>
       </div>
 

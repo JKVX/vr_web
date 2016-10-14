@@ -66,6 +66,7 @@
           <option value="<?= $row['id']?>" <?php if($row['id']==$members['role_id']):?> selected <?php endif;?>><?= $row['role_name']?></option>
         <?php endforeach; ?>
         </select>
+        <input type="text" name="role2" id="role2" placeholder="组别" value="<?= $members['role2']?>">
         <input type="text" name="admission_year" id="admission_year" required value="<?= $members['admission_year']?>">
         <input type="text" name="major" id="major" required value="<?= $members['major']?>">
         <div id="skill_div">

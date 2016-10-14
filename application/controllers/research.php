@@ -273,7 +273,7 @@ class Research extends CI_Controller
             $this->projects->update($data);
         }
 
-        echo "<script>alert('添加设备成功！')</script>";
+        echo "<script>alert('添加项目成功！')</script>";
         $this->addnewitem();
     }
     public function save_edit(){

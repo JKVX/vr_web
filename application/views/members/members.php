@@ -21,7 +21,8 @@
                 <div style="height: 60px;position: relative;">
                 <div class="float_div"><p><span><?= $members[$i][$j]['admission_year']?></span></p></div>
                 <div class="float_div"><p><span><?= $members[$i][$j]['major']?></span></p></div>
-                <div class="float_div"><p><span><?= $member_role[$i]['role_name']?></span></p></div>
+                <?php if($members[$i][$j]['role2']==""):?><div class="float_div"><p><span><?= $member_role[$i]['role_name']?></span></p></div><?php endif;?>
+                <?php if($members[$i][$j]['role2']!=""):?><div class="float_div"><p><span><?= $members[$i][$j]['role2']?></span></p></div><?php endif;?>
                 </div>
                 <div style="margin-top: 15px;width:250px;position: relative;float: left;">
                 <div class="float_div"><p><span><?= $members[$i][$j]['skill1']?></span></p></div>

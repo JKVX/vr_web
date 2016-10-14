@@ -154,6 +154,7 @@
             $("#u34_input").val("");
             $("#u36_select").val("-2");
             $("#u38_textarea").val("");
+            document.getElementById('u45_img').src="<?= base_url('images/deletemember/u37.png')?>";
           }
         });
       }
@@ -184,6 +185,7 @@
             $("#u36_select").val("-2");
             $("#u38_textarea").val("");
         }
+            document.getElementById('u45_img').src="<?= base_url('images/deletemember/u37.png')?>";
       }
       function down_members(){
        if($("#u41_input").val()!=-1&&$("#u41_input").val()!=-2&&$("#u41_input").val()!=null){
@@ -213,6 +215,7 @@
             $("#u36_select").val("-2");
             $("#u38_textarea").val("");
       }
+            document.getElementById('u45_img').src="<?= base_url('images/deletemember/u37.png')?>";
       }
       </script>
 

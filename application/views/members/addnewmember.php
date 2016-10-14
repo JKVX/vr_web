@@ -47,7 +47,7 @@
 
       <div id="u29" class="ax_h1">
         <div id="u30" class="text">
-          <p><span>增加成员</span></p>
+          <p><span>新加成员</span></p>
         </div>
       </div>
 
@@ -60,11 +60,12 @@
       <div id="u34" class="ax_html__">
         <input id="u34_input" type="text" name="members_name" required="required" />
       </div>
-        <select id="u38_select" name="role_id" required>
+        <select id="u38_select" name="role_id" required >
         <?php foreach ($member_role as $row):?>
           <option value="<?= $row['id']?>"><?= $row['role_name']?></option>
         <?php endforeach; ?>
-        </select>
+        </select>   
+        <input type="text" name="role2" id="role2" placeholder="组别">
         <input type="text" name="admission_year" id="admission_year" required>
         <input type="text" name="major" id="major" required>
         <div id="skill_div">

@@ -87,7 +87,7 @@
 
   <script type="text/javascript">
     var ue = UE.getEditor('editor', {
-        toolbars: [['fullscreen', 'undo', 'redo', '|',
+        toolbars: [[/*'fullscreen', 'undo', 'redo', '|',
             'bold', 'italic', 'underline', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset',
             'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', '|',
             'customstyle', 'paragraph', 'fontfamily', 'fontsize', '|',
@@ -96,7 +96,7 @@
             'simpleupload', 'insertimage', 'emotion', 'insertvideo','background', '|',
             'horizontal', 'date', 'time', 'snapscreen', '|',
             'inserttable', 'deletetable', 'insertparagraphbeforetable', 'insertrow', 'deleterow', 'insertcol', 'deletecol', 'mergecells', 'mergeright', 'mergedown', 'splittocells', 'splittorows', 'splittocols', 'charts', '|',
-            'searchreplace', 'drafts']],
+            'searchreplace', 'drafts'*/]],
         //focus时自动清空初始化时的内容
         autoClearinitialContent: false,
         //关闭字数统计

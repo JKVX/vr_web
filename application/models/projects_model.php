@@ -121,7 +121,9 @@ class Projects_model extends CI_Model
             $this->update($down_projects);    
         }
         $save_dir=dirname(dirname(dirname(__FILE__)))."/documents/projects/".$id;
-        $this->deldir($save_dir);
+        if (is_dir($save_dir)){ 
+            $this->deldir($save_dir);
+        } 
     }
 
 

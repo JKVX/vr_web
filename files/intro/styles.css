@@ -266,6 +266,9 @@
   top:0px;
   width:852px;
   word-wrap:break-word;
+  height: 100px;
+  text-overflow:ellipsis;
+  overflow:hidden;
 }
 #u20 {
   position:absolute;
@@ -940,12 +943,13 @@
 }
 #uwdiv {
   position:relative;
-  width:196px;
+  width:800px;
   height:138px;
   font-family:'微软雅黑 Bold', '微软雅黑';
   font-style:normal;
   color:#D8AF03;
-  
+  overflow: hidden;
+  text-overflow: ellipsis; 
 }
  #u67_img {
   position:relative;
@@ -954,13 +958,14 @@
 } 
 #uwt {
   position:relative;
-  width:400px;
+  width:700px;
   white-space:nowrap;
+  text-overflow: ellipsis;
 }
 #uwc {
   position:relative;
   left:26px;
-  width:600px;
+  width:700px;
   margin-top: 18px;
   text-align:left;
   display:block;
@@ -971,7 +976,7 @@
 }
 #uwc_input {
   position:relative;
-  width:600px;
+  width:700px;
   height:29px;
   font-family:'汉仪细简黑简', '汉仪细简黑简';
   font-style:normal;
@@ -1307,7 +1312,7 @@ margin-left: 10px;
  TEXT-ALIGN: left; line-height: 25px; margin: 0px 0px 0px 10px; COLOR: #3373a3
 }
 #wtp{
-  font-size:40px;
+  font-size:40px;width: 700px;text-overflow: ellipsis;
 }
 #wtp1{
   font-family:'微软雅黑 Bold', '微软雅黑';font-size:40px;
@@ -1359,7 +1364,7 @@ margin-left: 10px;
 .techniques_title{
   position: absolute;
   height:39px;
-  width:139px;
+  width:380px;
   white-space:nowrap;
   left:245px;
   top:13px;
@@ -1368,12 +1373,14 @@ margin-left: 10px;
   font-style:normal;
   font-size:30px;
   color:#D8AF03;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .techniques_intro{
   position: absolute;
   left: 245px;
   top:70px;
-  width:200px;
+  width:350px;
   background-color:transparent;
   font-family:'汉仪细简黑简', '汉仪细简黑简';
   font-style:normal;
@@ -1383,5 +1390,6 @@ margin-left: 10px;
   color:#B3B3B3;
   text-align:left;
   border-color:transparent;
+  text-overflow: ellipsis;
   outline-style:none;
 }

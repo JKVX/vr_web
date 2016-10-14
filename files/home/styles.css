@@ -222,6 +222,9 @@
   float: right;
   margin-right: 30px;
   text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 320px;
 }
 #u32 {
   position:absolute;
@@ -243,13 +246,16 @@
   width:562px;
   height:336px;
 }
-#u33 {
-  position:absolute;
+.u33 {
+  position:relative;
   left:0px;
   top:0px;
   width:562px;
-  word-wrap:break-word;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
 }
+
 #u34 {
   position:absolute;
   left:0px;

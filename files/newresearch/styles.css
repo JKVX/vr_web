@@ -317,6 +317,9 @@ top:669px; */
   font-style:normal;
   font-size:26px;
   color:#666666;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 1408px;
 }
 #u24_img {
   position:absolute;
@@ -968,7 +971,7 @@ top:669px; */
   color: #1C1C1C;
   margin-top: 62px;
   position: relative;
-  height: 34px;
+/*   height: 34px; */
   margin-left: 64px;
 }
 #summary_div{
@@ -1004,7 +1007,7 @@ top:669px; */
   color:#D8AF03;
 }
 #video_detail{
-  margin-top:30px;
+  margin-top:40px;
   width: 900px;
   height: 412px;
   position: relative;
@@ -1026,7 +1029,7 @@ top:669px; */
   margin-left:22px;
   margin-top: 68px;
   width: 462px;
-  height: 240px;
+/*   height: 240px; */
   float: left;
   position: relative; 
 }

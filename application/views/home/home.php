@@ -30,12 +30,12 @@
         </div>
       </div>
 
-      <div id="u32" class="ax_文本">
-        <div id="u33" class="text">
+      <div id="u32" class="ax_文本">  
           <?php for($i=0;$i<count($news)&&$i<9;$i++){?>
-            <a style="text-decoration:none;" href="<?="/home/news_detail/".$news[$i]['id']?>"><p><span><?= $news[$i]['news_title']?></span><p></a>
+          <div class="u33" style="overflow:hidden;">
+            <a style="text-decoration:none;" href="<?="/home/news_detail/".$news[$i]['id']?>"><?= $news[$i]['news_title']?></a>
+          </div>
           <?php }?>
-        </div>
       </div>
 
       <div id="u34" class="ax_形状">

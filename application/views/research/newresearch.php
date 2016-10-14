@@ -2,16 +2,10 @@
     <div id="base" class="">
       <div id="u16" class="ax_形状">
         <img id="u16_img" class="img " src="<?= base_url('images/research/u16.png')?>"/>
-        <div id="u17" class="text">
-          <p><span></span></p>
-        </div>
       </div>
 
       <div id="u18" class="ax_形状">
         <img id="u18_img" class="img " src="<?= base_url('images/research/u18.png')?>"/>
-        <div id="u19" class="text">
-          <p><span></span></p>
-        </div>
       </div>
 
       <div id="u20" class="ax_image">
